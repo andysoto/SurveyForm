@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif !important;
+}
+
+form {
+  /* background-color: white !important; */
+  border-radius: 5px;
+  width: 45%;
+  padding: 40px;
+  margin: 4em auto;
+  color: #fff;
+  /* color: black; */
+}
+/* Form background color  */
+.gradient {
+    background-image: linear-gradient(120deg, #02dbaf 0%, #00b8e6 100%);
+}
+
+::placeholder {
+  color: gray;
+  opacity: 0.8;
+}
+
+/* text inputes */
+#name, #email, #age {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 2px solid #fff;
+  /* border-bottom: 1px solid gray; */
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+#dropdown, #dropdown2, #comments {
+  background-color: transparent;
+  border: 2px solid #fff;
+  /* border: 1px solid gray; */
+}
+
+input[type="radio"] {
+  padding-right: 15px;
+}
+
+label {
+  font-weight: normal !important;
+}
+
+/* form[type="radio"], form[type="checkbox"] {
+  display: inline-block;
+  width: auto;
+} */
+
+#dropdown2 {
+  margin-left: 10px;
+}
+
+#comments {
+  margin-left: 15px;
+}
+
+button {
+  background-color: transparent;
+  border: 2px solid #fff !important;
+  /* border: 1px solid gray !important; */
+}

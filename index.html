@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang=en>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Survey Form</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- <div class="card"> -->
+      <!-- <div class="card-body"> -->
+        <form id="survey-form" class="gradient">
+
+          <h1 id="title" class="text-center">Survey Form</h1>
+          <p id="description" class="text-center">Let us know how we can improve</p>
+
+          <!-- Name, Email, Age -->
+          <fieldset class="form-group">
+            <label for="name" id="name-label"> * Name </label>
+            <input id="name" type="text" placeholder="Enter your name" required/>
+          </fieldset>
+          <fieldset class="form-group">
+            <label for="email" id="email-label"> * Email </label>
+            <input id="email" type="email" placeholder="Enter your email" required/>
+          </fieldset>
+          <fieldset class="form-group">
+            <label for="age" id="number-label"> * Age </label>
+            <input id="number" type="number"/ placeholder="Age" min="7" max="120">
+          </fieldset>
+
+          <!--  Dropdown: Current Role -->
+          <fieldset class="form-group">
+            <label for="dropdown">Which option best describes your current role?</label>
+              <select id="dropdown">
+                <option selected disabled>Select an option</option>
+                <option value="student">Student</option>
+                <option value="job">Full Time Job</option>
+                <option value="learner">Full Time Learner</option>
+                <option value="notsay">Prefer not to say</option>
+                <option value="other">Other</option>
+              </select>
+
+          </fieldset>
+
+          <!-- Radio Buttons: Recommendation -->
+          <fieldset class="form-group">
+            <label>* How likely is that you would recommend freeCodeCamp to a friend?</label>
+
+            <div class="form-check">
+              <input type="radio" name="recommend" value="definitely" id="definitely"/>
+              <label for="definitely" class="form-check-label">Definitely</label>
+            </div>
+
+            <div class="form-check">
+              <input type="radio" name="recommend" value="maybe" id="maybe"/>
+              <label for="maybe" class="form-check-label">Maybe</label>
+            </div>
+
+            <div class="form-check">
+              <input type="radio" name="recommend" value="notsure" id="sure"/>
+              <label for="notsure" class="form-check-label">Not sure</label>
+            </div>
+
+          </fieldset>
+
+          <!-- Dropdown: Likes -->
+          <fieldset class="form-group">
+            <label for="dropdown2"> What do you like most in FCC: </label>
+            <select id="dropdown2">
+              <option selected disabled>Select an option</option>
+              <option value="challenges">Challenges</option>
+              <option value="projects">Projects</option>
+              <option value="Community">Community</option>
+              <option value="opensource">Open Source</option>
+            </select>
+          </fieldset>
+
+          <!-- Checkboxes: Improvements -->
+          <fieldset class="form-group">
+            <label>Things that should be improved in the future (Check all that apply):</label>
+
+            <div class="form-check">
+              <label for="frontend" class="form-check-label"></label>
+              <input type="checkbox" name="improvement" value="frontend" id="frontend"/> Front-end Projects
+            </div>
+
+            <div class="form-check">
+              <label for="backend" class="form-check-label"></label>
+              <input type="checkbox" name="improvement" value="backend" id="backend"/> Back-end Projects
+            </div>
+
+            <div class="form-check">
+              <label for="datavis" class="form-check-label"></label>
+              <input type="checkbox" name="improvement" value="datavis" id="datavis"/> Data Visualization
+            </div>
+
+            <div class="form-check">
+              <label for="challenges" class="form-check-label"></label>
+              <input type="checkbox" name="improvement" value="challenges" id="challenges"/> Challenges
+            </div>
+
+            <div class="form-check">
+              <label for="open" class="form-check-label"></label>
+              <input type="checkbox" name="improvement" value="open"id="open"/> Open Source Community
+            </div>
+
+            <div class="form-check">
+              <label for="gitter" class="form-check-label"></label>
+              <input type="checkbox" name="improvement" value="gitter" id="gitter"/> Gitter help rooms
+            </div>
+
+            <div class="form-check">
+              <label for="videos" class="form-check-label"></label>
+              <input type="checkbox" name="improvement" value="videos" id="videos"/> Videos
+            </div>
+
+            <div class="form-check">
+              <label for="meetups" class="form-check-label"></label>
+              <input type="checkbox" name="improvement" value="meetups" id="meetups"/> City Meetups
+            </div>
+
+            <div class="form-check">
+              <label for="wiki" class="form-check-label"></label>
+              <input type="checkbox" name="improvement" value="wiki" id="wiki"/> Wiki
+            <div class="form-check">
+
+            <div class="form-check">
+              <label for="forum" class="form-check-label"></label>
+              <input type="checkbox" name="improvement" value="forum" id="forum"/> Forum
+            </div>
+
+            <div class="form-check">
+              <label for="courses" class="form-check-label"></label>
+              <input type="checkbox" name="improvement" value="courses" id="courses"/> Additional Courses
+            </div>
+
+          </fieldset>
+
+          <!--  Text Area: Comments/Suggestions -->
+          <fieldset class="form-group">
+            <label for="comments">Any Comments or Suggestions?</label>
+            <textarea id="comments" placeholder="Enter your comment here..."></textarea>
+          </fieldset>
+
+          <!-- Submit Button -->
+          <button id="submit" type="submit" class="btn">Submit</button>
+
+        </form>
+      <!-- </div> -->
+    <!-- </div> -->
+
+  </body>
+</html>
